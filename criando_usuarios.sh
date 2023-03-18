@@ -1,4 +1,4 @@
-#!/bin/bash
+ls#!/bin/bash
 
 echo "Gerando diretorios:"
 
@@ -19,13 +19,13 @@ useradd carlos -c “Carlos da Silva” -m -s /bin/bash -p $(openssl passwd -cry
 useradd maria -c “Maria Oliveira” -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_ADM
 useradd joao -c “João Florencio” -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_ADM
 
-useradd debora -c “Debora da Silva” -m -s /bin/bash -p $(openssl -crypt Senha123) -G GRP_VEN
-useradd sebastiana -c “Sebastiana Ferreira” -m -s /bin/bash -p $(openssl -crypt Senha123) -G GRP_VEN
-useradd roberto -c “Roberto  Silva” -m -s /bin/bash -p $(openssl -crypt Senha123) -G GRP_VEN
+useradd debora -c “Debora da Silva” -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_VEN
+useradd sebastiana -c “Sebastiana Ferreira” -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_VEN
+useradd roberto -c “Roberto  Silva” -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_VEN
 
-useradd josefina -c “Josefina Silva” -m -s /bin/bash -p $(openssl -crypt Senha123) -G GRP_SEC
-useradd amanda  -m -s /bin/bash -p $(openssl -crypt Senha123) -G GRP_SEC
-useradd rogerio  -m -s /bin/bash -p $(openssl -crypt Senha123) -G GRP_SEC
+useradd josefina -c “Josefina Silva” -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_SEC
+useradd amanda  -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_SEC
+useradd rogerio  -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_SEC
 
 echo "criando diretorios"
 chown root:GRP_ADM /adm
