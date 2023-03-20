@@ -15,17 +15,15 @@ groupadd GRP_SEC
 echo "Criando usuarios:"
 
 
-useradd carlos -c “Carlos da Silva” -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_ADM
-useradd maria -c “Maria Oliveira” -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_ADM
-useradd joao -c “João Florencio” -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_ADM
-
-useradd debora -c “Debora da Silva” -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_VEN
-useradd sebastiana -c “Sebastiana Ferreira” -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_VEN
-useradd roberto -c “Roberto  Silva” -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_VEN
-
-useradd josefina -c “Josefina Silva” -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_SEC
-useradd amanda  -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_SEC
-useradd rogerio  -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_SEC
+useradd carlos -m -c "Carlos Oliveira" -s /bin/bash -p $(openssl passwd carlos) -g GRP_ADM 
+useradd maria -m -c "Maria Joaquina" -s /bin/bash -p $(openssl passwd maria) -g GRP_ADM
+useradd joao -c "Joao Carlos" -s /bin/bash -p $(openssl passwd joao) -g GRP_ADM
+useradd debora -m -c "Debora Nascimento" -s /bin/bash -p $(openssl passwd debora) -g GRP_VEN 
+useradd sebastiana -m -c "Sebastiana Silva" -s /bin/bash -p $(openssl passwd sebastiana) -g GRP_VEN
+useradd roberto -m -c "Roberto Silvino" -s /bin/bash -p $(openssl passwd roberto) -g GRP_VEN
+useradd josefina -m -c "Josefina Alves" -s /bin/bash -p $(openssl passwd josefina) -g GRP_SEC
+useradd amanda -m -c "Amanda Sousa" -s /bin/bash -p $(openssl passwd amanda) -g GRP_SEC
+useradd rogerio -m -c "Rogerio Silva" -s /bin/bash -p $(openssl passwd rogerio) -g GRP_SEC
 
 echo "criando diretorios"
 chown root:GRP_ADM /adm
