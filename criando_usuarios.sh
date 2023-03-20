@@ -1,4 +1,4 @@
-ls#!/bin/bash
+#!/bin/bash
 
 echo "Gerando diretorios:"
 
